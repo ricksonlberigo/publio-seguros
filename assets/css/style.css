@@ -236,7 +236,7 @@ body.menu-expanded .button__secondary {
 #home {
   padding-top: calc(var(--nav-height) + 4rem);
   padding-bottom: 20rem;
-  background-image: url('../img/mobile-home-imagem.jpg');
+  background-image: url('../img/mobile-home-imagem.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -302,23 +302,12 @@ body.menu-expanded .button__secondary {
 }
 
 /* ===== INSURANCE COMPANY =============== */
-#insurance__company .wrapper {
-  padding: 0;
-}
-
 #insurance__company .header__section {
   margin-bottom: 6rem;
-  padding-inline: 2.4rem;
-  padding-bottom: 0;
 }
 
 #insurance__company .header__section h2 {
   color: var(--titles);
-}
-
-.swiper-slide {
-  height: auto;
-  padding: 4rem 3rem;
 }
 
 .insurance__card {
@@ -333,6 +322,11 @@ body.menu-expanded .button__secondary {
 
 .insurance__card img {
   align-self: center;
+}
+
+.swiper-slide {
+  height: auto;
+  /* padding: 4rem 3rem; */
 }
 
 /* ===== CONTACT =============== */
@@ -370,7 +364,7 @@ body.menu-expanded .button__secondary {
 }
 
 #contact .local {
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
 /* ===== FOOTER =============== */

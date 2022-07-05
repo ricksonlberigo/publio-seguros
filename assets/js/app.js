@@ -3,6 +3,7 @@ window.addEventListener('scroll', onScroll)
 onScroll()
 function onScroll() {
   backToTopButtonShow()
+  activeMenuCurrentSection()
 }
 
 function openMenu() {
@@ -22,30 +23,29 @@ function backToTopButtonShow() {
   }
 }
 
-// ===== SWIPER ===============
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-  },
-  breakpoints: {
-    720: {
-      slidesPerView: 2,
-    },
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  mousewheel: {
-    invert: true,
-  },
-})
+function activeMenuCurrentSection() {
+  const sections = document.querySelectorAll('section[id]')
+  const checkpoints = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoints >= sectionTop
+    const checkpointEnd = checkpoints <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('.nav__item a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('.nav__item a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}
 
 // SCROLL REVEAL
 ScrollReveal({
@@ -66,3 +66,28 @@ ScrollReveal({
   #contact .content,
   footer,
   footer p`)
+
+// ===== SWIPER ===============
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    720: {
+      slidesPerView: 3,
+    },
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  mousewheel: {
+    invert: true,
+  },
+})
