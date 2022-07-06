@@ -1,11 +1,7 @@
 body.menu-expanded .nav__link:hover,
 section h1 span,
-section h3 {
+section span {
   color: var(--yellow);
-}
-.swiper-slide,
-img {
-  height: auto;
 }
 #about header h2,
 #contact header h2 {
@@ -64,6 +60,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 button {
   cursor: pointer;
@@ -137,7 +134,7 @@ body {
 section {
   padding-block: 10rem;
 }
-section h3 {
+section span {
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   margin-bottom: 1.2rem;
@@ -147,6 +144,10 @@ section h1 {
   font-size: 4.8rem;
   margin-bottom: 3.2rem;
   color: var(--white);
+}
+section h1 span {
+  font-size: 4.8rem;
+  text-transform: capitalize;
 }
 section h2 {
   font-size: var(--xl-font-size);
@@ -259,6 +260,11 @@ body.menu-expanded .nav__link {
 }
 .insurance__card img {
   align-self: center;
+}
+.swiper-slide {
+  height: auto;
+  padding: 4rem 3rem;
+  margin-right: 0.8rem;
 }
 #contact header h2 {
   color: var(--white);

@@ -121,7 +121,7 @@ section {
   padding-block: 10rem;
 }
 
-section h3 {
+section span {
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   color: var(--yellow);
@@ -137,6 +137,8 @@ section h1 {
 
 section h1 span {
   color: var(--yellow);
+  font-size: 4.8rem;
+  text-transform: capitalize;
 }
 
 section h2 {
@@ -326,7 +328,8 @@ body.menu-expanded .button__secondary {
 
 .swiper-slide {
   height: auto;
-  /* padding: 4rem 3rem; */
+  padding: 4rem 3rem;
+  margin-right: 0.8rem;
 }
 
 /* ===== CONTACT =============== */

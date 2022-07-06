@@ -71,7 +71,7 @@ ScrollReveal({
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   autoplay: {
-    delay: 2500,
+    delay: 1500,
     disableOnInteraction: false,
   },
   pagination: {
